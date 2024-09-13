@@ -1,0 +1,52 @@
+{
+    "textui" : {
+        "start_chopping" : "[E] - Comenzar a desmantelar el vehículo",
+        "being_chopped" : "Este vehículo ya está siendo desmantelado"
+    },
+
+    "notify" : {
+        "start_chopping" : "Comenzaste a desmantelar el vehículo",
+        "fail_skillcheck" : "¡Fallaste en desmantelar!",
+        "cant_chop" : "¡No puedes desmantelar este tipo de vehículo!",
+
+        "stevo_chopshop:1" : "Desmantelar la puerta del conductor delantero",
+        "stevo_chopshop:2" : "Desmantelar la puerta del pasajero delantero",
+        "stevo_chopshop:3" : "Desmantelar la puerta del pasajero trasero",
+        "stevo_chopshop:4" : "Desmantelar la puerta del conductor trasero",
+        "stevo_chopshop:5" : "Desmantelar el maletero",
+        "stevo_chopshop:6" : "Desmantelar la llanta delantera izquierda",
+        "stevo_chopshop:7" : "Desmantelar la llanta delantera derecha",
+        "stevo_chopshop:8" : "Desmantelar la llanta trasera izquierda",
+        "stevo_chopshop:9" : "Desmantelar la llanta trasera derecha",
+        "stevo_chopshop:10" : "¡Desmantelar todo el coche!",
+        "stevo_chopshop:11" : "¡Desmantelaste todo el coche!" 
+    },
+
+    "progress" : {
+        "stevo_chopshop:1" : "Desmantelando el capó...",
+        "stevo_chopshop:2" : "Desmantelando la puerta...",
+        "stevo_chopshop:3" : "Desmantelando la puerta...",
+        "stevo_chopshop:4" : "Desmantelando la puerta...",
+        "stevo_chopshop:5" : "Desmantelando la puerta...",
+        "stevo_chopshop:6" : "Desmantelando el maletero...",
+        "stevo_chopshop:7" : "Desmantelando la llanta...",
+        "stevo_chopshop:8" : "Desmantelando la llanta...",
+        "stevo_chopshop:9" : "Desmantelando la llanta...",
+        "stevo_chopshop:10" : "Desmantelando la llanta...",
+        "stevo_chopshop:11" : "Desmantelando el chasis..." 
+    },
+
+    "target" : {
+        "stevo_chopshop:1" : "Desmantelar capó",
+        "stevo_chopshop:2" : "Desmantelar puerta",
+        "stevo_chopshop:3" : "Desmantelar puerta",
+        "stevo_chopshop:4" : "Desmantelar puerta",
+        "stevo_chopshop:5" : "Desmantelar puerta",
+        "stevo_chopshop:6" : "Desmantelar maletero",
+        "stevo_chopshop:7" : "Desmantelar llanta",
+        "stevo_chopshop:8" : "Desmantelar llanta",
+        "stevo_chopshop:9" : "Desmantelar llanta",
+        "stevo_chopshop:10" : "Desmantelar llanta",
+        "stevo_chopshop:11" : "Desmantelar llanta" 
+    }
+}

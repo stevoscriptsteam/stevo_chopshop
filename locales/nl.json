@@ -1,0 +1,52 @@
+{
+    "textui" : {
+        "start_chopping" : "[E] - Begin met het slopen van het voertuig",
+        "being_chopped" : "Dit voertuig wordt al gesloopt"
+    },
+
+    "notify" : {
+        "start_chopping" : "Begonnen met het slopen van het voertuig",
+        "fail_skillcheck" : "Je bent niet geslaagd met slopen!",
+        "cant_chop" : "Je kunt dit type voertuig niet slopen!",
+
+        "stevo_chopshop:1" : "Sloop de voorste bestuurdersdeur",
+        "stevo_chopshop:2" : "Sloop de voorste passagiersdeur",
+        "stevo_chopshop:3" : "Sloop de achterste passagiersdeur",
+        "stevo_chopshop:4" : "Sloop de achterste bestuurdersdeur",
+        "stevo_chopshop:5" : "Sloop de kofferbak",
+        "stevo_chopshop:6" : "Sloop de linker voorband",
+        "stevo_chopshop:7" : "Sloop de rechter voorband",
+        "stevo_chopshop:8" : "Sloop de linker achterband",
+        "stevo_chopshop:9" : "Sloop de rechter achterband",
+        "stevo_chopshop:10" : "Sloop de hele auto!",
+        "stevo_chopshop:11" : "Je hebt de hele auto gesloopt!" 
+    },
+
+    "progress" : {
+        "stevo_chopshop:1" : "Bezig met het slopen van de motorkap...",
+        "stevo_chopshop:2" : "Bezig met het slopen van de deur...",
+        "stevo_chopshop:3" : "Bezig met het slopen van de deur...",
+        "stevo_chopshop:4" : "Bezig met het slopen van de deur...",
+        "stevo_chopshop:5" : "Bezig met het slopen van de deur...",
+        "stevo_chopshop:6" : "Bezig met het slopen van de kofferbak...",
+        "stevo_chopshop:7" : "Bezig met het slopen van de band...",
+        "stevo_chopshop:8" : "Bezig met het slopen van de band...",
+        "stevo_chopshop:9" : "Bezig met het slopen van de band...",
+        "stevo_chopshop:10" : "Bezig met het slopen van de band...",
+        "stevo_chopshop:11" : "Bezig met het slopen van het chassis..." 
+    },
+
+    "target" : {
+        "stevo_chopshop:1" : "Sloop motorkap",
+        "stevo_chopshop:2" : "Sloop deur",
+        "stevo_chopshop:3" : "Sloop deur",
+        "stevo_chopshop:4" : "Sloop deur",
+        "stevo_chopshop:5" : "Sloop deur",
+        "stevo_chopshop:6" : "Sloop kofferbak",
+        "stevo_chopshop:7" : "Sloop band",
+        "stevo_chopshop:8" : "Sloop band",
+        "stevo_chopshop:9" : "Sloop band",
+        "stevo_chopshop:10" : "Sloop band",
+        "stevo_chopshop:11" : "Sloop band" 
+    }
+}

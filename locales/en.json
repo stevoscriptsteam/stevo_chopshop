@@ -1,0 +1,54 @@
+{
+    "textui" : {
+        "start_chopping" : "[E] - Start Chopping Vehicle",
+        "being_chopped" : "This vehicle is already being chopped"
+    },
+
+    "notify" : {
+        "start_chopping" : "Started Chopping Vehicle",
+        "fail_skillcheck" : "You failed the chop!",
+        "cant_chop" : "You cannot chop this kind of vehicle!",
+
+        "stevo_chopshop:1" : "Chop the Front Driver Door",
+        "stevo_chopshop:2" : "Chop the Front Passenger Door",
+        "stevo_chopshop:3" : "Chop the Back Passenger Door",
+        "stevo_chopshop:4" : "Chop the Back Driver Door",
+        "stevo_chopshop:5" : "Chop the Boot",
+        "stevo_chopshop:6" : "Chop the Front Left Tire",
+        "stevo_chopshop:7" : "Chop the Front Right Tire",
+        "stevo_chopshop:8" : "Chop the Back Left Tire",
+        "stevo_chopshop:9" : "Chop the Back Right Tire",
+        "stevo_chopshop:10" : "Chop the entire car!",       
+        "stevo_chopshop:11" : "You chopped the entire car!" 
+    },
+
+    "progress" : {
+        "stevo_chopshop:1" : "Chopping the bonnet off...",
+        "stevo_chopshop:2" : "Chopping the door  off...",
+        "stevo_chopshop:3" : "Chopping the door off...",
+        "stevo_chopshop:4" : "Chopping the door off...",
+        "stevo_chopshop:5" : "Chopping the door off...",
+        "stevo_chopshop:6" : "Chopping the boot off...",
+        "stevo_chopshop:7" : "Chopping the tire off...",
+        "stevo_chopshop:8" : "Chopping the tire off...",
+        "stevo_chopshop:9" : "Chopping the tire off...",
+        "stevo_chopshop:10" :"Chopping the tire off...",
+        "stevo_chopshop:11" : "Chopping the chassis..." 
+    },
+
+    "target" : {
+        "stevo_chopshop:1" : "Chop Bonnet",
+        "stevo_chopshop:2" : "Chop Door",
+        "stevo_chopshop:3" : "Chop Door",
+        "stevo_chopshop:4" : "Chop Door",
+        "stevo_chopshop:5" : "Chop Door",
+        "stevo_chopshop:6" : "Chop Boot",
+        "stevo_chopshop:7" : "Chop Tire",
+        "stevo_chopshop:8" : "Chop Tire",
+        "stevo_chopshop:9" : "Chop Tire",
+        "stevo_chopshop:10" :"Chop Tire",
+        "stevo_chopshop:11" : "Chop Tire" 
+    }
+    
+    
+}
