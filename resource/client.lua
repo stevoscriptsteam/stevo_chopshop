@@ -1,4 +1,4 @@
-if not lib.checkDependency('stevo_lib', '1.6.8') then return end
+if not lib.checkDependency('stevo_lib', '1.6.9') then return end
 lib.locale()
 local config = require('config')
 local stevo_lib = exports['stevo_lib']:import()

@@ -1,5 +1,5 @@
 lib.versionCheck('stevoscriptsteam/stevo_chopshop')
-if not lib.checkDependency('stevo_lib', '1.6.0') then error('Waa') end
+if not lib.checkDependency('stevo_lib', '1.6.9') then return end
 local stevo_lib = exports['stevo_lib']:import()
 local config = lib.require('config')
 
