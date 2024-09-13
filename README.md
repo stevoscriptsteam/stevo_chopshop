@@ -9,11 +9,9 @@
 - **Requires:** ox_target, ox_lib & stevo_lib
 - **Supported Frameworks:** ESX, QBCore & Qbox
 
-Enjoy!
+Follow our installation guide: [Click Here](https://docs.stevoscripts.com/free-scripts/stevo_chopshop)
 
 Preview: [Click Here](https://youtu.be/nmMr3Y0QKXw?si=sY0talBtUiRlEyOd)
-<br>
-Documentation: [Click Here](https://docs.stevoscripts.com/free-scripts/stevo_chopshop) *(Coming Soon)*
 <br>
 Discord: [Click Here](https://discord.gg/stevoscripts)
 <br>
