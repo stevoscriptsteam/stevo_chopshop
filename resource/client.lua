@@ -1,4 +1,4 @@
-if not lib.checkDependency('stevo_lib', '1.6.9') then return end
+if not lib.checkDependency('stevo_lib', '1.6.8') then error('stevo_lib version 1.6.9 is required for stevo_chopshop to work!') return end
 lib.locale()
 local config = require('config')
 local stevo_lib = exports['stevo_lib']:import()
@@ -137,6 +137,7 @@ local function chopPart(data)
 end
 
 local function loadChopShops()
+    print('hello')
     local totalChopShops = 0
     for i, chopShop in pairs(config.chopShops) do    
         lib.zones.poly({
@@ -150,6 +151,7 @@ local function loadChopShops()
         })
 
         local blip = chopShop.blip
+        print(json.encode(blip))
         if blip then 
             blips[i] = AddBlipForCoord(blip.coords.x, blip.coords.y, blip.coords.z)
 
@@ -323,6 +325,10 @@ end
 AddEventHandler('onResourceStart', function(resource)
     if resource ~= cache.resource then return end
 
+    loadChopShops()
+end)
+
+AddEventHandler('stevo_lib:playerLoaded', function()
     loadChopShops()
 end)
 
