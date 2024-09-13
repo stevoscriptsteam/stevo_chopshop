@@ -14,6 +14,7 @@
 **Follow our installation guide: [Click Here](https://docs.stevoscripts.com/free-scripts/stevo_chopshop)**
 ﻿
 > **Dependencies:**
+> <br>
 > **[stevo_lib 1.6.9](https://github.com/stevoscriptsteam/stevo_lib/releases/tag/1.6.9)**
 > <br>
 > **[ox_lib](https://github.com/overextended/ox_lib/releases/tag/v3.24.0)**
