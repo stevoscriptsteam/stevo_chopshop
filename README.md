@@ -9,12 +9,12 @@
 - **Requires:** ox_target, ox_lib & stevo_lib
 - **Supported Frameworks:** ESX, QBCore & Qbox
 
-Preview: https://youtu.be/nmMr3Y0QKXw?si=sY0talBtUiRlEyOd
+Preview: [Click Here](https://youtu.be/nmMr3Y0QKXw?si=sY0talBtUiRlEyOd)
 <br>
-Documentation: https://docs.stevoscripts.com/free-scripts/stevo_drugsell
+Documentation: [Click Here](https://docs.stevoscripts.com/free-scripts/stevo_drugsell)
 <br>
-Discord: https://discord.gg/stevoscripts
+Discord: [Click Here](https://discord.gg/stevoscripts)
 <br>
-Check our our paid releases!: https://store.stevoscripts.com/
+Check our our paid releases!: [Click Here](https://store.stevoscripts.com/)
 
 ![image](https://github.com/user-attachments/assets/49e559dd-9916-4844-b28e-5a0ab9e2f58a)
