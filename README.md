@@ -5,6 +5,7 @@
 ﻿
 - Any player in the zone can chop the vehicle, players can also continue chopping if they crash. 
 - Configurable Rewards! 
+- Configurable Police Alert!
 - Configurable Locations, Have as many as you want
 - **Supported Frameworks:** ESX, QBCore & Qbox 
 - **Supported Inventories:** All! 
