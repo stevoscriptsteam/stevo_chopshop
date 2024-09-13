@@ -1,5 +1,5 @@
-# Stevo Chop Shops
-## Simple but optimized and secure chopshop for FiveM! 
+# Stevo's Chop Shops
+## Simple but optimized and secure chopshop for FiveM! :red_car: :axe:
 
 **Created with optimization and security as a first priority, giving a seamless and secure experience.**
 
