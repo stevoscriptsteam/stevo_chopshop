@@ -7,7 +7,7 @@
 - Configurable Rewards!
 - Configurable Locations, Have as many as you want!
 - **Requires:** ox_target, ox_lib & stevo_lib
-- **Supported Frameworks: ** ESX, QBCore & Qbox
+- **Supported Frameworks:** ESX, QBCore & Qbox
 
 ![image](https://github.com/user-attachments/assets/49e559dd-9916-4844-b28e-5a0ab9e2f58a)
 
