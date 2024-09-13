@@ -70,6 +70,6 @@ return {
         ["stevo_chopshop:11"] = 5000, -- Whole chassis
     },
 
-    debug = true,
+    debug = false, -- Enabling debug prints and zones.
     
 }
