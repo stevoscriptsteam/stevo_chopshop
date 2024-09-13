@@ -137,7 +137,6 @@ local function chopPart(data)
 end
 
 local function loadChopShops()
-    print('hello')
     local totalChopShops = 0
     for i, chopShop in pairs(config.chopShops) do    
         lib.zones.poly({
@@ -151,7 +150,6 @@ local function loadChopShops()
         })
 
         local blip = chopShop.blip
-        print(json.encode(blip))
         if blip then 
             blips[i] = AddBlipForCoord(blip.coords.x, blip.coords.y, blip.coords.z)
 
