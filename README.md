@@ -1,9 +1,11 @@
 # Stevo Chop Shops
 ## Simple but optimized and secure chopshop for FiveM! 
 
-Created with optimization and security as a first priority, giving a seamless and secure experience.
-Requires: ox_target, ox_lib & stevo_lib
-Supports ESX, QBCore & Qbox
+**Created with optimization and security as a first priority, giving a seamless and secure experience.**
+<br>
+**Requires:** ox_target, ox_lib & stevo_lib
+<br>
+**upports** ESX, QBCore & Qbox
 
 ![image](https://github.com/user-attachments/assets/49e559dd-9916-4844-b28e-5a0ab9e2f58a)
 
