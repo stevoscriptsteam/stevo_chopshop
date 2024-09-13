@@ -6,8 +6,9 @@
 - Any player in the zone can chop the vehicle, players can also continue chopping if they crash.
 - Configurable Rewards!
 - Configurable Locations, Have as many as you want!
-- **Requires:** ox_target, ox_lib & stevo_lib
 - **Supported Frameworks:** ESX, QBCore & Qbox
+- **Supported Inventories:** All!
+- **Locales:** EN, ES & NL
 
 Follow our installation guide: [Click Here](https://docs.stevoscripts.com/free-scripts/stevo_chopshop)
 
