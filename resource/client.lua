@@ -309,7 +309,6 @@ local function loadChopShops()
             doorIndex = false,
             wheelIndex = false,
             chassis = true,
-            bones = {'chassis_dummy'},
             onSelect = chopPart,
             canInteract = function(entity)
                 return insideZone and Entity(entity).state.currentlyChopping and Entity(entity).state.choppingStage == 11

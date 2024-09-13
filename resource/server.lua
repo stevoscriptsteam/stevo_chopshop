@@ -32,7 +32,7 @@ lib.callback.register('stevo_chopshop:finish', function(source, _vehicle)
         return playerCheating(source)
     end 
 
-    DeleteVehicle(vehicle)
+    DeleteEntity(vehicle)
 
     local playerPed = GetPlayerPed(source)
     local playerCoords = GetEntityCoords(playerPed)
