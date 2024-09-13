@@ -75,6 +75,8 @@ local function chopPart(data)
 
     local vehicle = data.entity
 
+    if data.name == 'stevo_chopshop:1' then config.policeDispatch(cache.ped, vehicle) end
+
     if data.doorIndex then 
         SetVehicleDoorOpen(vehicle, data.doorIndex, false, false)
     end

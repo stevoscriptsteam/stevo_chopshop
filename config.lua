@@ -1,6 +1,11 @@
 return {
     dropCheaters = true, -- If cheaters should be dropped/kicked from the server for exploiting events
 
+    policeDispatch = function(ped, vehicle)
+        -- PS dispatch example
+        --exports['ps-dispatch']:VehicleTheft(vehicle)
+    end,
+
     chopShops = {
         lsia = {
             securityCoords = vec3(-425.2410, -1687.6906, 19.0291), -- Put in the middle of the chopping zone
