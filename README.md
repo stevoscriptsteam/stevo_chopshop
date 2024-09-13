@@ -15,7 +15,9 @@
 ﻿
 > **Dependencies:**
 > **[stevo_lib 1.6.9](https://github.com/stevoscriptsteam/stevo_lib/releases/tag/1.6.9)**
+<br>
 > **[ox_lib](https://github.com/overextended/ox_lib/releases/tag/v3.24.0)**
+<br>
 > **[ox_target](https://github.com/overextended/ox_target/releases/tag/v1.17.0)**
 
 
