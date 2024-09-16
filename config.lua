@@ -1,6 +1,12 @@
 return {
     dropCheaters = true, -- If cheaters should be dropped/kicked from the server for exploiting events
 
+    globalCooldown = 5, -- Time in minutes for global cooldown (Set to false for no cooldown)
+    policeRequired = 1, -- Police required to start chopping vehicle
+    policeJob = 'police',
+
+    --playerOwnedOnly = false, -- If only player owned vehicles should be able to be chopped (Deletes from database)- WIP
+
     policeDispatch = function(ped, vehicle)
         -- PS dispatch example
         --exports['ps-dispatch']:VehicleTheft(vehicle)
@@ -41,9 +47,53 @@ return {
         'boat'
     },
 
-    rewards = {
-        {item = 'plastic', amount = math.random(1, 5)},
-        {item = 'steel', amount = 2}
+    rewards = { -- Add rewards for each part.
+
+        ["stevo_chopshop:1"] = { -- Bonnet
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:2"] = { -- Front dri Door
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:3"] = { -- Front pas door
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:4"] = { -- Back dri Door
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:5"] = { -- Back pas Door
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:6"] = { -- Boot
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:7"] = { -- Front dri wheel
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:8"] = { -- Front pas wheel
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:9"] = {-- Back dri wheel
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:10"] = {-- Back pas wheel
+            {item = 'plastic', amount = 1},
+        },
+
+        ["stevo_chopshop:11"] = { -- Whole chassis
+            {item = 'plastic', amount = 1},
+            {item = 'steel', amount = 1},
+        },
+
     },
 
     skillchecks = {

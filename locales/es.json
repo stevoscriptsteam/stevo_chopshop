@@ -7,6 +7,8 @@
     "notify" : {
         "start_chopping" : "Comenzaste a desmantelar el vehículo",
         "fail_skillcheck" : "¡Fallaste en desmantelar!",
+        "chop_cooldown" : "There is currently a cooldown!",
+        "chop_police" : "There is not enough police to start chopping!",
         "cant_chop" : "¡No puedes desmantelar este tipo de vehículo!",
 
         "stevo_chopshop:1" : "Desmantelar la puerta del conductor delantero",

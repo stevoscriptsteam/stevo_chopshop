@@ -7,6 +7,8 @@
     "notify" : {
         "start_chopping" : "Started Chopping Vehicle",
         "fail_skillcheck" : "You failed the chop!",
+        "chop_cooldown" : "There is currently a cooldown!",
+        "chop_police" : "There is not enough police to start chopping!",
         "cant_chop" : "You cannot chop this kind of vehicle!",
 
         "stevo_chopshop:1" : "Chop the Front Driver Door",

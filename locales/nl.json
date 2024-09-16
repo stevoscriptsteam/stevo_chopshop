@@ -7,6 +7,8 @@
     "notify" : {
         "start_chopping" : "Begonnen met het slopen van het voertuig",
         "fail_skillcheck" : "Je bent niet geslaagd met slopen!",
+        "chop_cooldown" : "There is currently a cooldown!",
+        "chop_police" : "There is not enough police to start chopping!",
         "cant_chop" : "Je kunt dit type voertuig niet slopen!",
 
         "stevo_chopshop:1" : "Sloop de voorste bestuurdersdeur",

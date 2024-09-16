@@ -46,6 +46,15 @@ local function inside(self)
     if not isOpen then lib.hideTextUI() return end
 
     if IsControlJustReleased(1, 38) then 
+
+        if GlobalState.stevo_chopshop_cooldown then 
+            return stevo_lib.Notify(locale("notify.chop_cooldown"), 'error', 5000)
+        end
+
+        if not lib.callback.await('stevo_chopshop:canChop', false) then 
+            return stevo_lib.Notify(locale("notify.chop_police"), 'error', 5000)
+        end
+
         local vehicleType = GetVehicleType(cache.vehicle)
 
         for i, type in pairs(config.blockedVehicleTypes) do 
@@ -109,30 +118,12 @@ local function chopPart(data)
             SetVehicleTyreBurst(vehicle, data.wheelIndex, true, 1000.0)
         end
 
-        local choppingStage = Entity(vehicle).state.choppingStage
 
-        CreateThread(function()
-            if choppingStage < 11 then 
-                local doors = GetNumberOfVehicleDoors(vehicle)
+        local doors = GetNumberOfVehicleDoors(vehicle)
 
-                if doors == 3 and choppingStage == 3 then Entity(vehicle).state:set('choppingStage', 7, true) stevo_lib.Notify(locale("notify.stevo_chopshop:6"), 'success', 5000) return end
+        local chopPart, chopNotify = lib.callback.await('stevo_chopshop:chopPart', false, data, NetworkGetNetworkIdFromEntity(vehicle), doors)
 
-                if doors == 4 and choppingStage == 3 then Entity(vehicle).state:set('choppingStage', 6, true) stevo_lib.Notify(locale("notify.stevo_chopshop:5"), 'success', 5000) return end
-       
-                Entity(vehicle).state:set('choppingStage', choppingStage + 1, true)
-
-                stevo_lib.Notify(locale("notify."..data.name), 'success', 5000)
-
-            end
-        end)
-
-        if data.chassis then 
-            local finishChop = lib.callback.await('stevo_chopshop:finish', false, NetworkGetNetworkIdFromEntity(vehicle))
-
-            if not finishChop then return end
-        end
-
-        
+        if chopPart then stevo_lib.Notify(chopNotify, 'success', 5000) end
     else 
         return
     end

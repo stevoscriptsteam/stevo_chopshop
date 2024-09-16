@@ -3,6 +3,10 @@ if not lib.checkDependency('stevo_lib', '1.6.8') then error('stevo_lib version 1
 local stevo_lib = exports['stevo_lib']:import()
 local config = lib.require('config')
 
+GlobalState.stevo_chopshop_cooldown = false
+
+
+
 ---@param source number
 local function playerCheating(source)
     local identifier = stevo_lib.GetIdentifier(source)
@@ -16,8 +20,30 @@ local function playerCheating(source)
 end
 
 ---@param source number
+---@param name string
+local function giveRewards(source, name)
+    local rewardTable = config.rewards[name]
+
+    for i, reward in pairs(rewardTable) do 
+        stevo_lib.AddItem(source, reward.item, reward.amount)
+    end
+end
+
+local function cooldown()
+    CreateThread(function()
+        if config.globalCooldown then 
+            GlobalState.stevo_chopshop_cooldown = true 
+            SetTimeout(config.globalCooldown*60000, function()
+                GlobalState.stevo_chopshop_cooldown = false
+            end)
+        end
+    end)
+    return
+end
+
+---@param source number
 ---@param _vehicle integer
-lib.callback.register('stevo_chopshop:finish', function(source, _vehicle)
+lib.callback.register('stevo_chopshop:chopPart', function(source, data, _vehicle, doors)
     local vehicle = NetworkGetEntityFromNetworkId(_vehicle)
 
     if not DoesEntityExist(vehicle) then 
@@ -27,13 +53,7 @@ lib.callback.register('stevo_chopshop:finish', function(source, _vehicle)
     if not Entity(vehicle).state.currentlyChopping then 
         return playerCheating(source)
     end 
-
-    if Entity(vehicle).state.choppingStage ~= 11 then 
-        return playerCheating(source)
-    end 
-
-    DeleteEntity(vehicle)
-
+    
     local playerPed = GetPlayerPed(source)
     local playerCoords = GetEntityCoords(playerPed)
     local insideChopshop = false
@@ -50,12 +70,52 @@ lib.callback.register('stevo_chopshop:finish', function(source, _vehicle)
         return playerCheating(source)
     end
 
-    for i, reward in pairs(config.rewards) do 
-        stevo_lib.AddItem(source, reward.item, reward.amount)
+    local choppingStage = Entity(vehicle).state.choppingStage
+
+    if Entity(vehicle).state.choppingStage == 11 then 
+        DeleteEntity(vehicle)
+        giveRewards(source, data.name)
+
+        return true, locale("notify."..data.name)
     end
 
+    
+    if doors == 3 and choppingStage == 3 then 
+        Entity(vehicle).state:set('choppingStage', 7, true) 
+        giveRewards(source, data.name)
+        
+        return true, locale("notify.stevo_chopshop:6")
+    end
 
-    return true
+    if doors == 4 and choppingStage == 3 then 
+        Entity(vehicle).state:set('choppingStage', 6, true) 
+        giveRewards(source, data.name)
+
+        return true, locale("notify.stevo_chopshop:5")
+    end
+
+        
+    Entity(vehicle).state:set('choppingStage', choppingStage + 1, true)
+    giveRewards(source, data.name)
+
+    return true, locale("notify."..data.name)
+end)
+
+---@param source number 
+---@return boolean
+lib.callback.register('stevo_chopshop:canChop', function(source)
+    if not config.policeRequirement then 
+        cooldown()
+        return true 
+    end
+
+    if stevo_lib.GetJobCount(config.policeJob) > config.policeRequirement then 
+        cooldown()
+        return true
+        
+    end
+    
+    return false
 end)
 
 
