@@ -1,5 +1,6 @@
 lib.versionCheck('stevoscriptsteam/stevo_chopshop')
 if not lib.checkDependency('stevo_lib', '1.6.8') then error('stevo_lib version 1.6.9 is required for stevo_chopshop to work!') return end
+lib.locale
 local stevo_lib = exports['stevo_lib']:import()
 local config = lib.require('config')
 
@@ -109,7 +110,7 @@ lib.callback.register('stevo_chopshop:canChop', function(source)
         return true 
     end
 
-    if stevo_lib.GetJobCount(config.policeJob) > config.policeRequirement then 
+    if stevo_lib.GetJobCount(config.policeJob) >= config.policeRequirement then 
         CreateThread(cooldown))
         return true
         
