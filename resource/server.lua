@@ -105,12 +105,12 @@ end)
 ---@return boolean
 lib.callback.register('stevo_chopshop:canChop', function(source)
     if not config.policeRequirement then 
-        cooldown()
+        CreateThread(cooldown))
         return true 
     end
 
     if stevo_lib.GetJobCount(config.policeJob) > config.policeRequirement then 
-        cooldown()
+        CreateThread(cooldown))
         return true
         
     end
