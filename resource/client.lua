@@ -51,7 +51,7 @@ local function inside(self)
             return stevo_lib.Notify(locale("notify.chop_cooldown"), 'error', 5000)
         end
 
-        if lib.callback.await('stevo_chopshop:canChop', false) then 
+        if not lib.callback.await('stevo_chopshop:canChop', false) then 
             return stevo_lib.Notify(locale("notify.chop_police"), 'error', 5000)
         end
 
