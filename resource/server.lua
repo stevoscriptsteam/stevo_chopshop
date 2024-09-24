@@ -1,12 +1,10 @@
 lib.versionCheck('stevoscriptsteam/stevo_chopshop')
-if not lib.checkDependency('stevo_lib', '1.6.8') then error('stevo_lib version 1.6.9 is required for stevo_chopshop to work!') return end
+if not lib.checkDependency('stevo_lib', '1.6.8') then error('stevo_lib version 1.6.8 is required for stevo_chopshop to work!') return end
 lib.locale()
 local stevo_lib = exports['stevo_lib']:import()
 local config = lib.require('config')
 
 GlobalState.stevo_chopshop_cooldown = false
-
-
 
 ---@param source number
 local function playerCheating(source)
@@ -39,7 +37,6 @@ local function cooldown()
             end)
         end
     end)
-    return
 end
 
 ---@param source number
@@ -102,19 +99,16 @@ lib.callback.register('stevo_chopshop:chopPart', function(source, data, _vehicle
     return true, locale("notify."..data.name)
 end)
 
----@param source number 
 ---@return boolean
-lib.callback.register('stevo_chopshop:canChop', function(source)
-    if not config.policeRequirement then 
-        CreateThread(cooldown))
-        return true 
-    end
+lib.callback.register('stevo_chopshop:canChop', function()
 
-    if stevo_lib.GetJobCount(config.policeJob) >= config.policeRequirement then 
-        CreateThread(cooldown))
-        return true
-        
-    end
+    if GlobalState.stevo_chopshop_cooldown then return false end
+
+    if not config.policeRequirement then cooldown() return true end
+
+    local police = stevo_lib.GetJobCount(config.policeJob)
+
+    if police >= config.policeRequired then cooldown() return true end
     
     return false
 end)
