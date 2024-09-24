@@ -2,10 +2,8 @@ return {
     dropCheaters = true, -- If cheaters should be dropped/kicked from the server for exploiting events
 
     globalCooldown = 5, -- Time in minutes for global cooldown (Set to false for no cooldown)
-    policeRequired = 1, -- Police required to start chopping vehicle
+    policeRequired = false, -- Police required to start chopping vehicle
     policeJob = 'police',
-
-    --playerOwnedOnly = false, -- If only player owned vehicles should be able to be chopped (Deletes from database)- WIP
 
     policeDispatch = function(ped, vehicle)
         -- PS dispatch example
