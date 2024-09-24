@@ -5,7 +5,7 @@ lua54 'yes'
 
 author "Stevo Scripts | steve"
 description 'Simple Chop Shop'
-version '1.0.2'
+version '1.0.3'
 
 shared_script {
     '@ox_lib/init.lua',
