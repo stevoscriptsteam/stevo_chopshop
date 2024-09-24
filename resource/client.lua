@@ -1,4 +1,4 @@
-if not lib.checkDependency('stevo_lib', '1.6.8') then error('stevo_lib version 1.6.9 is required for stevo_chopshop to work!') return end
+if not lib.checkDependency('stevo_lib', '1.6.8') then error('stevo_lib version 1.6.8 is required for stevo_chopshop to work!') return end
 lib.locale()
 local config = require('config')
 local stevo_lib = exports['stevo_lib']:import()
@@ -146,13 +146,16 @@ local function loadChopShops()
         if blip then 
             blips[i] = AddBlipForCoord(blip.coords.x, blip.coords.y, blip.coords.z)
 
-
+            SetBlipAsShortRange(blips[i], true)
             SetBlipSprite(blips[i], blip.sprite) 
             SetBlipColour(blips[i], blip.color) 
             SetBlipScale(blips[i], blip.scale)
             BeginTextCommandSetBlipName('STRING')
             AddTextComponentSubstringPlayerName(blip.name)
             EndTextCommandSetBlipName(blips[i])
+
+            SetBlipDisplay(blips[i], 4)
+            SetBlipAsMissionCreatorBlip(blips[i], true)
         end
 
         totalChopShops = totalChopShops +1
