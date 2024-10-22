@@ -1,0 +1,56 @@
+{
+    "textui" : {
+        "start_chopping" : "[E] Alusta sõiduki lammutamist",
+        "being_chopped" : "Seda sõidukit juba tükeldatakse"
+    },
+
+    "notify" : {
+        "start_chopping" : "Hakka sõidukit lammutama",
+        "fail_skillcheck" : "Sa ei saanud hakkama!",
+        "chop_cooldown" : "Ära kiirusta sõiduki lammutamisega!",
+        "chop_police" : "Politseid pole piisavalt, et lammutama hakata!",
+        "cant_chop" : "Sellist sõidukit ei saa lammutada!",
+
+        "stevo_chopshop:1" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:2" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:3" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:4" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:5" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:6" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:7" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:8" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:9" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:10" : "Sõiduki jupi lammutamine oli edukas!",
+        "stevo_chopshop:11" : "Terve sõiduk on ära lammutatud!"
+    },
+
+    "progress" : {
+        "stevo_chopshop:1" : "Lammutad kapotti",
+        "stevo_chopshop:2" : "Lammutad ust",
+        "stevo_chopshop:3" : "Lammutad ust",
+        "stevo_chopshop:4" : "Lammutad ust",
+        "stevo_chopshop:5" : "Lammutad ust",
+        "stevo_chopshop:6" : "Lammutad rehvi",
+        "stevo_chopshop:7" : "Lammutad rehvi",
+        "stevo_chopshop:8" : "Lammutad rehvi",
+        "stevo_chopshop:9" : "Lammutad rehvi",
+        "stevo_chopshop:10" :"Lammutad rehvi",
+        "stevo_chopshop:11" : "Lammutad sõidukit" 
+    },
+
+    "target" : {
+        "stevo_chopshop:1" : "Lammutad kapotti",
+        "stevo_chopshop:2" : "Lammutad ust",
+        "stevo_chopshop:3" : "Lammutad ust",
+        "stevo_chopshop:4" : "Lammutad ust",
+        "stevo_chopshop:5" : "Lammutad ust",
+        "stevo_chopshop:6" : "Lammutad rehvi",
+        "stevo_chopshop:7" : "Lammutad rehvi",
+        "stevo_chopshop:8" : "Lammutad rehvi",
+        "stevo_chopshop:9" : "Lammutad rehvi",
+        "stevo_chopshop:10" :"Lammutad rehvi",
+        "stevo_chopshop:11" : "Lammuta sõidukit" 
+    }
+    
+    
+}
