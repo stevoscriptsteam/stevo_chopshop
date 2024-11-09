@@ -23,7 +23,7 @@
 > **[ox_target](https://github.com/overextended/ox_target/releases/tag/v1.17.0)**
 
 
-Preview: [Click Here](https://youtu.be/nmMr3Y0QKXw?si=sY0talBtUiRlEyOd)
+Preview: [Click Here](https://youtu.be/qdrjP_yIs6s)
 <br>
 Discord: [Click Here](https://discord.gg/stevoscripts)
 <br>
