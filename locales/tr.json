@@ -1,0 +1,54 @@
+{
+    "textui": {
+        "start_chopping": "[E] - Aracı Parçalamaya Başla",
+        "being_chopped": "Bu araç zaten parçalanıyor"
+    },
+
+    "notify": {
+        "start_chopping": "Araç parçalama işlemi başladı",
+        "fail_skillcheck": "Parçalama işlemi başarısız oldu!",
+        "chop_cooldown": "Şu anda bir bekleme süresi var!",
+        "chop_police": "Araç parçalamaya başlamak için yeterli polis yok!",
+        "cant_chop": "Bu tür bir aracı parçalayamazsın!",
+
+        "stevo_chopshop:1": "Ön Sürücü Kapısını Parçala",
+        "stevo_chopshop:2": "Ön Yolcu Kapısını Parçala",
+        "stevo_chopshop:3": "Arka Yolcu Kapısını Parçala",
+        "stevo_chopshop:4": "Arka Sürücü Kapısını Parçala",
+        "stevo_chopshop:5": "Bagajı Parçala",
+        "stevo_chopshop:6": "Ön Sol Lastiği Parçala",
+        "stevo_chopshop:7": "Ön Sağ Lastiği Parçala",
+        "stevo_chopshop:8": "Arka Sol Lastiği Parçala",
+        "stevo_chopshop:9": "Arka Sağ Lastiği Parçala",
+        "stevo_chopshop:10": "Tüm Aracı Parçala!",
+        "stevo_chopshop:11": "Tüm aracı parçaladın!"
+    },
+
+    "progress": {
+        "stevo_chopshop:1": "Kaputu söküyorsun...",
+        "stevo_chopshop:2": "Kapıyı söküyorsun...",
+        "stevo_chopshop:3": "Kapıyı söküyorsun...",
+        "stevo_chopshop:4": "Kapıyı söküyorsun...",
+        "stevo_chopshop:5": "Kapıyı söküyorsun...",
+        "stevo_chopshop:6": "Bagajı söküyorsun...",
+        "stevo_chopshop:7": "Lastiği söküyorsun...",
+        "stevo_chopshop:8": "Lastiği söküyorsun...",
+        "stevo_chopshop:9": "Lastiği söküyorsun...",
+        "stevo_chopshop:10": "Lastiği söküyorsun...",
+        "stevo_chopshop:11": "Şasiyi parçalıyorsun..."
+    },
+
+    "target": {
+        "stevo_chopshop:1": "Kaputu Parçala",
+        "stevo_chopshop:2": "Kapıyı Parçala",
+        "stevo_chopshop:3": "Kapıyı Parçala",
+        "stevo_chopshop:4": "Kapıyı Parçala",
+        "stevo_chopshop:5": "Kapıyı Parçala",
+        "stevo_chopshop:6": "Bagajı Parçala",
+        "stevo_chopshop:7": "Lastiği Parçala",
+        "stevo_chopshop:8": "Lastiği Parçala",
+        "stevo_chopshop:9": "Lastiği Parçala",
+        "stevo_chopshop:10": "Lastiği Parçala",
+        "stevo_chopshop:11": "Parçalamayı Bitir"
+    }
+}
