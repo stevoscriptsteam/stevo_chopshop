@@ -1,4 +1,7 @@
 {
+    "chopshop" : "Chopshop",
+    
+    
     "textui" : {
         "start_chopping" : "[E] - Start Chopping Vehicle",
         "being_chopped" : "This vehicle is already being chopped"
