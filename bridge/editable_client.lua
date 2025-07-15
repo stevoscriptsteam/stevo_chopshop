@@ -1,15 +1,4 @@
-local config = require('config.config')
-
-
-function Bridge.Client.GetCallsign()
-  if config.callsign == "stevo_police" then
-    return LocalPlayer.state.stevo_police_callsign
-  elseif config.callsign == "framework" then
-    return Bridge.Client.GetFrameworkCallsign()
-  else
-    return ''
-  end
-end
+local config = require('config')
 
 ---@param text string
 function Bridge.Client.ShowTextUI(text)
