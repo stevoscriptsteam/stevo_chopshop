@@ -184,6 +184,51 @@ function Bridge.Server.GetPlayerBalance(src, type)
   end
 end
 
+---@param source number 
+---@param item string 
+---@param amount number
+function Bridge.Server.AddItem(source, item, amount)
+  local amount = 0
+
+  if config.Framework == "QBCore" then
+    local player = QBCore.Functions.GetPlayer(source)
+    return player.Functions.AddItem(item, count)
+  elseif config.Framework == "Qbox" then
+    return exports.ox_inventory:AddItem(source, item, count)
+  elseif config.Framework == "ESX" then
+    local player = ESX.GetPlayerFromId(source)
+    return player.addInventoryItem(item, count)
+  end
+
+  return false
+end
+
+---@param job string
+---@return integer
+function Bridge.Server.GetJobCount(job)
+  local amount = 0
+
+  if config.Framework == "QBCore" then
+    local players = QBCore.Functions.GetQBPlayers()
+    for _, v in pairs(players) do
+        if v and v.PlayerData.job.name == job then
+            amount = amount + 1
+        end
+    end
+  elseif config.Framework == "Qbox" then
+    local players = exports.qbx_core:GetQBPlayers()
+    for _, v in pairs(players) do
+        if v and v.PlayerData.job.name == job then
+            amount = amount + 1
+        end
+    end
+  elseif config.Framework == "ESX" then
+    ESX.GetExtendedPlayers('job', job)
+  end
+
+  return amount
+end
+
 ---@param src integer
 ---@param amount number
 ---@param account "cash" | "bank" | "money"
