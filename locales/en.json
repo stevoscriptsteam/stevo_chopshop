@@ -3,7 +3,7 @@
     
     
     "textui" : {
-        "start_chopping" : "[E] - Start Chopping Vehicle",
+        "start_chopping" : "**[E]** - Start Chopping Vehicle",
         "being_chopped" : "This vehicle is already being chopped"
     },
 
