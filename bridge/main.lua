@@ -1,4 +1,4 @@
-local config = require('config.config')
+local config = require('config')
 QBCore, ESX = nil, nil
 Bridge = {
   Client = {},
