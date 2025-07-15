@@ -9,15 +9,20 @@ version '1.0.4'
 
 shared_script {
     '@ox_lib/init.lua',
-    'config.lua'
+    'config.lua',
+    'bridge/main.lua'
 }
 
 client_scripts {
     'resource/client.lua',
+    'bridge/client.lua',
+    'bridge/editable_client.lua'
 }
 
 server_scripts {
-    'resource/server.lua'
+    'resource/server.lua',
+    'bridge/server.lua',
+    'bridge/editable_server.lua'
 }
 
 files {
