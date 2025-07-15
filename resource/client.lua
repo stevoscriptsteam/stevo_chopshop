@@ -1,7 +1,5 @@
-if not lib.checkDependency('stevo_lib', '1.6.8') then error('stevo_lib version 1.6.8 is required for stevo_chopshop to work!') return end
 lib.locale()
 local config = require('config')
-local stevo_lib = exports['stevo_lib']:import()
 
 local insideZone = false
 local blips = {}
@@ -48,20 +46,20 @@ local function inside(self)
     if IsControlJustReleased(1, 38) then 
 
         if GlobalState.stevo_chopshop_cooldown then 
-            return stevo_lib.Notify(locale("notify.chop_cooldown"), 'error', 5000)
+            return Bridge.Client.Notify(locale("chopshop"), locale("notify.chop_cooldown"), 'error', 5000)
         end
 
         if not lib.callback.await('stevo_chopshop:canChop', false) then 
-            return stevo_lib.Notify(locale("notify.chop_police"), 'error', 5000)
+            return Bridge.Client.Notify(locale("chopshop"), locale("notify.chop_police"), 'error', 5000)
         end
 
         local vehicleType = GetVehicleType(cache.vehicle)
 
         for i, type in pairs(config.blockedVehicleTypes) do 
-            if vehicleType == type then return stevo_lib.Notify(locale("notify.cant_chop"), 'error', 5000) end 
+            if vehicleType == type then return Bridge.Client.Notify(locale("chopshop"), locale("notify.cant_chop"), 'error', 5000) end 
         end
 
-        stevo_lib.Notify(locale("notify.start_chopping"), 'info', 5000)
+        Bridge.Client.Notify(locale("chopshop"), locale("notify.start_chopping"), 'info', 5000)
 
         Entity(cache.vehicle).state:set('currentlyChopping', true, true)
         Entity(cache.vehicle).state:set('choppingStage', 1, true)
@@ -80,7 +78,7 @@ local function chopPart(data)
     TaskTurnPedToFaceEntity(cache.ped, data.entity, 300)
     Wait(300)
     
-    if not lib.skillCheck(config.skillchecks[data.name]) then stevo_lib.Notify(locale("notify.fail_skillcheck"), 'error', 3000) return end
+    if not lib.skillCheck(config.skillchecks[data.name]) then Bridge.Client.Notify(locale("chopshop"), locale("notify.fail_skillcheck"), 'error', 3000) return end
 
     local vehicle = data.entity
 
@@ -123,13 +121,13 @@ local function chopPart(data)
 
         local chopPart, chopNotify = lib.callback.await('stevo_chopshop:chopPart', false, data, NetworkGetNetworkIdFromEntity(vehicle), doors)
 
-        if chopPart then stevo_lib.Notify(chopNotify, 'success', 5000) end
+        if chopPart then Bridge.Client.Notify(locale("chopshop"), chopNotify, 'success', 5000) end
     else 
         return
     end
 end
 
-local function loadChopShops()
+local function LoadChopShops()
     local totalChopShops = 0
     for i, chopShop in pairs(config.chopShops) do    
         lib.zones.poly({
@@ -315,15 +313,7 @@ local function loadChopShops()
     exports.ox_target:addGlobalVehicle(options)
 end
 
-AddEventHandler('onResourceStart', function(resource)
-    if resource ~= cache.resource then return end
 
-    loadChopShops()
-end)
-
-AddEventHandler('stevo_lib:playerLoaded', function()
-    loadChopShops()
-end)
 
 AddEventHandler('onResourceStop', function(resource)   
     if resource ~= cache.resource then return end
