@@ -1,4 +1,4 @@
-local config = require('config.config')
+local config = require('config')
 ---@param src integer
 ---@param msg string
 ---@param type "success" | "warning" | "error"
