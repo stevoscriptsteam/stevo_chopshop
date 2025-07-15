@@ -9,18 +9,18 @@ lib.onCache('vehicle', function(value)
 
     local isOpen, text = lib.isTextUIOpen()
 
-    if not value then if isOpen then lib.hideTextUI() end return end
+    if not value then if isOpen then Bridge.Client.HideTextUI() end return end
   
-    if Entity(value).state.currentlyChopping then lib.showTextUI(locale("textui.being_chopped")) return end
+    if Entity(value).state.currentlyChopping then Bridge.Client.ShowTextUI(locale("textui.being_chopped")) return end
         
-    lib.showTextUI(locale("textui.start_chopping"))
+    Bridge.Client.ShowTextUI(locale("textui.start_chopping"))
 
 end)
 
 local function onEnter(self)
     insideZone = self.chopshop
     if cache.vehicle then 
-        lib.showTextUI(locale("textui.start_chopping"))
+        Bridge.Client.ShowTextUI(locale("textui.start_chopping"))
     end
 end
  
@@ -29,7 +29,7 @@ local function onExit(self)
 
     local isOpen, text = lib.isTextUIOpen()
     if isOpen then 
-        lib.hideTextUI()
+        Bridge.Client.HideTextUI()
     end
 end
  
@@ -41,7 +41,7 @@ local function inside(self)
 
     local isOpen, text = lib.isTextUIOpen()
 
-    if not isOpen then lib.hideTextUI() return end
+    if not isOpen then Bridge.Client.HideTextUI() return end
 
     if IsControlJustReleased(1, 38) then 
 
@@ -69,7 +69,7 @@ local function inside(self)
         SetVehicleEngineOn(cache.vehicle, false, true, true)
         TaskLeaveVehicle(cache.ped, cache.vehicle, 0)
 
-        lib.hideTextUI()
+        Bridge.Client.HideTextUI()
     end
 
 end
@@ -127,7 +127,7 @@ local function chopPart(data)
     end
 end
 
-local function LoadChopShops()
+function LoadChopShops()
     local totalChopShops = 0
     for i, chopShop in pairs(config.chopShops) do    
         lib.zones.poly({
