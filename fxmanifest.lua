@@ -3,9 +3,9 @@ game 'gta5'
 use_experimental_fxv2_oal 'yes'
 lua54 'yes'
 
-author "Stevo Scripts | steve"
+author "StevoScripts"
 description 'Simple Chop Shop'
-version '1.0.3'
+version '1.0.4'
 
 shared_script {
     '@ox_lib/init.lua',
