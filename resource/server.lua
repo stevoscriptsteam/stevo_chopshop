@@ -1,14 +1,12 @@
 lib.versionCheck('stevoscriptsteam/stevo_chopshop')
-if not lib.checkDependency('stevo_lib', '1.6.8') then error('stevo_lib version 1.6.8 is required for stevo_chopshop to work!') return end
 lib.locale()
-local stevo_lib = exports['stevo_lib']:import()
 local config = lib.require('config')
 
 GlobalState.stevo_chopshop_cooldown = false
 
 ---@param source number
 local function playerCheating(source)
-    local identifier = stevo_lib.GetIdentifier(source)
+    local identifier = Bridge.Server.GetPlayerIdentifier(source)
     local name = GetPlayerName(source)
     local warningMessage = (locale("cheater_warning")):format(name, identifier)
     lib.print.info(warningMessage)
@@ -24,7 +22,7 @@ local function giveRewards(source, name)
     local rewardTable = config.rewards[name]
 
     for i, reward in pairs(rewardTable) do 
-        stevo_lib.AddItem(source, reward.item, reward.amount)
+        Bridge.Server.AddItem(source, reward.item, reward.amount)
     end
 end
 
@@ -106,7 +104,7 @@ lib.callback.register('stevo_chopshop:canChop', function()
 
     if not config.policeRequirement then cooldown() return true end
 
-    local police = stevo_lib.GetJobCount(config.policeJob)
+    local police = Bridge.Server.GetJobCount(config.policeJob)
 
     if police >= config.policeRequired then cooldown() return true end
     
