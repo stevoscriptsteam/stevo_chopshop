@@ -1,4 +1,10 @@
 return {
+    locale = 'en',
+    interaction = 'target', -- 'target' or 'textui'
+    target = 'auto', -- 'auto' | 'ox_target' | 'qb-target'
+    textUI = 'auto', -- 'auto' | 'ox_lib' | 'ps-ui'
+    notify = 'auto', -- 'auto' | 'ox_lib' | 'okokNotify' | 'ps-ui' | 'wasabi_notify'
+
     dropCheaters = true, -- If cheaters should be dropped/kicked from the server for exploiting events
 
     globalCooldown = 5, -- Time in minutes for global cooldown (Set to false for no cooldown)
