@@ -1,4 +1,6 @@
 {
+    "chopshop" : "Chopshop",
+
     "textui": {
         "start_chopping": "[E] - Aracı Parçalamaya Başla",
         "being_chopped": "Bu araç zaten parçalanıyor"

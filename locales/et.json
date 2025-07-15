@@ -1,4 +1,6 @@
 {
+    "chopshop" : "Chopshop",
+
     "textui" : {
         "start_chopping" : "[E] Alusta sõiduki lammutamist",
         "being_chopped" : "Seda sõidukit juba tükeldatakse"

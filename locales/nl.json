@@ -1,4 +1,6 @@
 {
+    "chopshop" : "Chopshop",
+
     "textui" : {
         "start_chopping" : "[E] - Begin met het slopen van het voertuig",
         "being_chopped" : "Dit voertuig wordt al gesloopt"

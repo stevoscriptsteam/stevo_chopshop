@@ -1,4 +1,6 @@
 {
+    "chopshop" : "Chopshop",
+
     "textui" : {
         "start_chopping" : "[E] - Comenzar a desmantelar el vehículo",
         "being_chopped" : "Este vehículo ya está siendo desmantelado"
